@@ -2,9 +2,11 @@ FROM node:latest
 
 WORKDIR /mongowithexpress
 
-COPY . /mongowithexpress
+COPY package* .
 
 RUN npm install
+
+COPY . .
 
 # EXPOSE 4000
 
